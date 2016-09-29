@@ -22,6 +22,14 @@ app.use(function(err, req, res, next) {
 
 app.use(morgan('dev'));
 
+app.use(express.static(__dirname + '/app'));
+
+app.get('/api', function(req, res) {
+    res.send('Welcome, however this is an api, nothing to see there...');
+});
+
+
+
 app.listen(app.get('port'), function() {
   console.log('We all love ami here: http://localhost:' + app.get('port'));
 });
