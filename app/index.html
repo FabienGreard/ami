@@ -3,9 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>amiTalks</title>
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="main">
+    <link rel="shortcut icon" href="../images/favicon.ico">
   </head>
   <body>
-    <h1>Hello i am Ami !</h1>
-    <h2>Ask me anything i have been created to help humans.</h2>
+    <div class="container">
+      <div id="shell-container">
+        <div class="header-shell">
+          <img class="cli-img" src="https://upload.wikimedia.org/wikipedia/en/e/ef/Command_prompt_icon_%28windows%29.png" alt="windows_cli.png" />
+          <p class="shell-title">C:\\Windows\system32\ami.exe</p>
+          <span onclick="console.error('Did you really think it would minimize it ?');" class="minimize"></span>
+          <span onclick="console.error('HuU');" class="maximize"></span>
+          <span onclick="console.error('IT IS A FAKE WINDOW SHELL !');" class="close"></span>
+        </div>
+        <div class="body-shell">
+        <p class="microsoft-label">Ami is Coming [version 1.0.0]</p>
+        <p class="microsoft-label">(c) 2016 Fabien Greard. All rights reserved.</p>
+          <p class="input">C:\Users\Ami> I am not finished yet ! However you can find any informations about my creator on<a class="link" href="https://www.linkedin.com/in/fabiengreard">linkedin</a><span class="ping"></span> </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+    <script>
+      var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+      if(isSafari){
+        document.getElementById('shell-container').style.display = 'none';
+        alert("Install chrome / firefox / edge !");
+      }
+      console.error("ERROR 404 AMI NOT FOUND !");
+   </script>
+   </footer>
   </body>
 </html>
