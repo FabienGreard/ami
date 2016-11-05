@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 var css = require('./../css/main.css');
 
 require(['./component/temp.js'], function(res){

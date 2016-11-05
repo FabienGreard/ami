@@ -5,9 +5,9 @@ var webpackMerge = require('webpack-merge');
 module.exports = webpackMerge(commonConfig, {
   output: {
     path: 'dist',
-    filename: '[name].js'
+    filename: '[id].[hash].js'
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[id].[hash].css')
   ],
 });

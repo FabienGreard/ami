@@ -1,7 +1,7 @@
 {
   "name": "www.amitalks.com",
   "version": "1.0.0",
-  "description": "Generic API server for ami",
+  "description": "Ami's app",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -23,13 +23,9 @@
     "webpack-merge": "^0.15.0"
   },
   "scripts": {
-    "prestart": "clear",
-    "start": "webpack-dev-server --progress --colors",
-    "prebuild": "rimraf dist",
-    "build": "webpack --progress --colors",
-    "predeploy": "echo im about to deploy",
-    "deploy": "node server.js",
-    "postdeploy": "echo ive deployed"
+    "start": "clear && webpack-dev-server --progress --colors",
+    "build": "clear && rimraf dist && mkdir dist && webpack --config config/webpack.prod.js --colors --progress",
+    "deploy": "node server.js"
   },
   "repository": {
     "type": "git",
