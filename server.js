@@ -22,7 +22,7 @@ app.use(function(err, req, res, next) {
 
 app.use(morgan('dev'));
 
-app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/api', function(req, res) {
     res.send('Welcome, however this is an api, nothing to see there...');
