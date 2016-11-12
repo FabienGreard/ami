@@ -4,11 +4,25 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-  'vendor': './app/lib/vendor.js',
-  'app': './app/js/main.js'
+  'vendor': './app/js/lib/vendor.js',
+  'app': ['babel-polyfill', './app/js/main.js']
+  },
+  resolve: {
+    extensions: ['', '.js', '.ts']
   },
   module: {
     loaders: [
+      {
+        test: /\.ts$/,
+        loaders: ['awesome-typescript-loader']
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
+      },
+      {
+        test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"
+      },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
@@ -27,7 +41,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor']
     }),
-
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       inject: 'body',
