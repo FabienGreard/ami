@@ -1,7 +1,7 @@
 "use strict";
 class App {
     constructor() {
-        console.log("ERROR 404 AMI NOT FOUND !");
+        console.error("ERROR 404 AMI NOT FOUND !");
     }
     init() {
         return new Promise((resolve, reject) => {
@@ -9,7 +9,9 @@ class App {
                 require(['../../css/main.css'], (css) => {
                     try {
                         require(['./../../html/app.html'], (html) => {
-                            resolve(html);
+                            window.setTimeout(function () {
+                                resolve(html);
+                            }, 2000);
                         });
                     }
                     catch (e) {

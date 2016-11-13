@@ -3,13 +3,14 @@ Ami is an AI ! It has to be used as a friend, she want to be your friend !
 
 #Dev-Roadmap
 
-Input, output
-Svg Ami Favicon, background
-Socket.io
-MongoDB
-...
-...
-...
+-comentary remove css&js&scss&whatever && favicon hash
+-Input, output
+-Svg Ami Favicon, background
+-Socket.io
+-MongoDB
+-...
+-...
+-...
 -React/Angular/Nothing
 
 #StartProject
