@@ -3,7 +3,7 @@ Ami is an AI ! It has to be used as a friend, she want to be your friend !
 
 #Dev-Roadmap
 
--comentary remove css&js&scss&whatever && favicon hash
+-comentary remove css&js&scss&whatever && favicon hash && concat && optimize css&js&whatever
 -Input, output
 -Svg Ami Favicon, background
 -Socket.io
