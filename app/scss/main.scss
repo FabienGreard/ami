@@ -1,3 +1,10 @@
-html{
-  background: red;
-}
+
+// Fonts & Vars also base template & mixins
+
+@import 'inc/fonts';
+@import 'inc/vars';
+@import 'inc/mixins';
+@import 'inc/bases';
+
+// Views
+@import 'views/app';

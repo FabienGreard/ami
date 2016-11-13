@@ -1,0 +1,142 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include flexbox;
+  padding: 10px;
+  #shell-container {
+    margin: auto;
+    background-color: $black;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 0 10px $black;
+    @include flexbox;
+    @include flex-direction(column);
+    .header-shell{
+      margin: auto;
+      background-color: white;
+      width: 100%;
+      height: 35px;
+      @include flexbox;
+      .cli-img{
+        margin: auto 5px;
+        width: 20px;
+        height: 20px;
+      }
+      .shell-title{
+        @include font-size(13px);
+        margin: auto 0;
+        color: $black;
+      }
+      .minimize{
+        margin: 1px 1px 1px auto;
+        width: 35px;
+        height: 33px;
+        @include flexbox;
+        &:hover{
+          background-color: $gray;
+          color: $white;
+        }
+        &:after{
+          content: '';
+          @include transform(rotate(90deg));
+          margin: auto;
+          border: 1px solid gray;
+          height: 10px;
+        }
+        &:hover:after{
+          border-color: $black;
+        }
+      }
+       .maximize{
+        @include flexbox;
+        margin: 1px 0;
+        width: 35px;
+        height: 33px;
+        content: "-";
+        &:hover{
+          background-color: $gray;
+          color: $white;
+        }
+        &:after{
+          content: '';
+          @include transform(rotate(90deg));
+          margin: auto;
+          border: 1.5px solid gray;
+          height: 7.5px;
+          width: 7.5px;
+        }
+        &:hover:after{
+          border-color: $black;
+        }
+      }
+      .close{
+        @include flexbox;
+        margin: 1px;
+        width: 35px;
+        height: 33px;
+        content: "-";
+        &:hover{
+          background-color: $red;
+          color: $white;
+        }
+        &:before{
+          content: '';
+          @include transform(rotate(-135deg) translate(-50%, 0%));
+          margin: auto 0 auto auto;
+          border: 1px solid gray;
+          height: 11px;
+        }
+        &:hover:before{
+          border-color: $white;
+        }
+        &:after{
+          content: '';
+          @include transform(rotate(135deg) translate(50%, 0%));
+          margin: auto auto auto 0;
+          border: 1px solid gray;
+          height: 11px;
+        }
+        &:hover:after{
+          border-color: $white;
+        }
+      }
+    }
+    .body-shell{
+      margin: auto;
+      overflow-y: scroll;
+      height: 470px;
+      width: 100%;
+      line-height: 0px;
+      @include flexbox;
+      @include flex-direction(column);
+      .microsoft-label{
+        margin: 9px 0;
+        @include font-size(14px);
+      }
+      .input{
+        @include font-size(14px);
+        line-height: normal;
+        position: relative;
+        .ping{
+          position: absolute;
+          bottom: 0;
+          width: 7px;
+          height: 4px;
+          @include animation(pong 1s infinite);
+        }
+        .link{
+          margin: auto 5px;
+          color: $green;
+        }
+      }
+    }
+    @include keyframes(pong) {
+      0%{background-color: $gray;}
+      50%{background-color: $gray;}
+      51%{background-color: $black;}
+    }
+  }
+}

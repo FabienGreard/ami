@@ -8,7 +8,7 @@ export class App{
         require(['../../css/main.css'], (css) => {
           try{
             require(['./../../html/app.html'], (html) => {
-              resolve(html);
+                resolve(html);
             });
           }catch(e) {
             reject("HTML load --" + e);

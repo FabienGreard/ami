@@ -1,0 +1,13 @@
+html {
+  background-color: $background;
+  h1, h2, h3, h4, h5 {
+    @include Merriweather(16px){
+      color: $green;
+    }
+  }
+  p, input, select, button {
+    @include Inconsolata(16px){
+      color: $green;
+    }
+  }
+}
