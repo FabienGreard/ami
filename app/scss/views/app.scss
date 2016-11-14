@@ -116,10 +116,16 @@
         margin: 9px 0;
         @include font-size(14px);
       }
-      .input{
-        @include font-size(14px);
+      .input-container{
         line-height: normal;
         position: relative;
+        @include inline-flex;
+        @include flex-direction(column);
+        .input{
+          position: relative;
+          @include Inconsolata(14px);
+          margin: 10px 0 0 0;
+        }
         .ping{
           position: absolute;
           bottom: 0;
@@ -128,6 +134,7 @@
           @include animation(pong 1s infinite);
         }
         .link{
+          @include Inconsolata(14px);
           margin: auto 5px;
           color: $green;
         }

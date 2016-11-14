@@ -4,6 +4,7 @@
     "gsap/core": "registry:dt/gsap/core#0.0.0+20160316155526",
     "gsap/ease": "registry:dt/gsap/ease#0.0.0+20160316155526",
     "gsap/tweenlite": "registry:dt/gsap/tweenlite#0.0.0+20160316155526",
-    "jquery": "registry:dt/jquery#1.10.0+20160929162922"
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "lodash": "registry:global/lodash#4.0.0+20160723033700"
   }
 }

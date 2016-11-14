@@ -9,9 +9,7 @@ class App {
                 require(['../../css/main.css'], (css) => {
                     try {
                         require(['./../../html/app.html'], (html) => {
-                            window.setTimeout(function () {
-                                resolve(html);
-                            }, 2000);
+                            resolve(html);
                         });
                     }
                     catch (e) {

@@ -204,14 +204,29 @@ html p, html input, html select, html button {
   font-size: 0.875rem;
 }
 
-.container #shell-container .body-shell .input {
-  font-size: 14px;
-  font-size: 0.875rem;
+.container #shell-container .body-shell .input-container {
   line-height: normal;
   position: relative;
+  display: -webkit-inline-box;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
-.container #shell-container .body-shell .input .ping {
+.container #shell-container .body-shell .input-container .input {
+  position: relative;
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 10px 0 0 0;
+}
+
+.container #shell-container .body-shell .input-container .ping {
   position: absolute;
   bottom: 0;
   width: 7px;
@@ -220,7 +235,10 @@ html p, html input, html select, html button {
   animation: pong 1s infinite;
 }
 
-.container #shell-container .body-shell .input .link {
+.container #shell-container .body-shell .input-container .link {
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
   margin: auto 5px;
   color: #00FF00;
 }

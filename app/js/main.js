@@ -1,6 +1,7 @@
 "use strict";
 require("../scss/components/loading.scss");
 const app_1 = require("./components/app");
+const ami_1 = require("./components/ami");
 class Main {
     constructor() {
         this.bootstrap = new app_1.App();
@@ -12,6 +13,7 @@ class Main {
                 ease: Power0.easeOut,
                 onComplete: function () {
                     $('#loading').remove();
+                    this.ami = new ami_1.Ami(["C:\\Users\\Ami> I am not finished yet ! However you can find any informations about my creator on", "<a class='link' href='https://www.linkedin.com/in/fabiengreard'>linkedin</a>"]);
                 }
             });
         }).catch((e) => {
