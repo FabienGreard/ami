@@ -1,5 +1,5 @@
-import { App } from './components/app';
 import '../scss/components/loading.scss';
+import { App } from './components/app';
 
 class Main{
   private bootstrap: App = new App();

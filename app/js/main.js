@@ -1,6 +1,6 @@
 "use strict";
-const app_1 = require("./components/app");
 require("../scss/components/loading.scss");
+const app_1 = require("./components/app");
 class Main {
     constructor() {
         this.bootstrap = new app_1.App();

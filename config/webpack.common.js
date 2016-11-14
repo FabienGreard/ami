@@ -39,11 +39,11 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor']
+      name: ['vendor', 'app'],
     }),
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       inject: 'body',
-    })
+    }),
   ]
 }
