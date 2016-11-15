@@ -1,7 +1,7 @@
 <img src="https://travis-ci.org/FabienGreard/ami.svg?branch=master" alt="build" />
 
 #AMI 
-Ami is an AI ! It has to be used as a friend, she want to be your friend !
+Ami is an AI ! It has to be used as a friend, also it is a she !
 
 #Dev-Roadmap
 
