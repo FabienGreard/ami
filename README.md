@@ -1,4 +1,4 @@
-#AMI
+#AMI https://travis-ci.org/FabienGreard/ami.svg?branch=master
 Ami is an AI ! It has to be used as a friend, she want to be your friend !
 
 #Dev-Roadmap
